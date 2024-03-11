@@ -3,7 +3,7 @@ from Worker import Worker
 from Admin import Admin
 from Book import Book
 from kumanda_sınıfı import Kumanda
-
+from Computer import Computer
 
 devoloper1 = Developer("Görkem" ,"Töre", 12345, 20000, ["Java", "Python", "C#"])
 devoloper1.showInfo()
@@ -53,7 +53,7 @@ print("""
       """)
 
 
-while True:
+while False: #true yaparsan çalışır.
 
     islem = input("İslem seciniz: ")
 
@@ -78,3 +78,9 @@ while True:
         print(kumanda)
     else:
         print("Geçersiz işlem")
+
+
+computer = Computer(processor="xeon e5450", threads=4, ghz=3.10)
+print(f"Ghz: {computer.getGhz()}")
+computer.setGhz(4.20)
+print(f"Ghz: {computer.getGhz()}")
